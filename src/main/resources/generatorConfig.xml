@@ -3,8 +3,9 @@
         "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-    <!--引入数据库配置文件以解耦-->
+    <!--引入数据库配置文件方便修改-->
     <properties resource="jdbc.properties"/>
+    <!--数据库驱动文件  需要修改 TODO-->
     <classPathEntry
             location="/Volumes/Tool/JAVA_Tool/maven/Maven_Repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar"/>
 
@@ -19,38 +20,36 @@
                         connectionURL="${jdbc.url}"
                         userId="${jdbc.username}"
                         password="${jdbc.password}"/>
-        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
-                    NUMERIC 类型解析为java.math.BigDecimal -->
+        <!--默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，-->
+        <!--为 true时把JDBC DECIMAL 和 NUMERIC 类型解析为java.math.BigDecimal -->
         <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <!-- 生成PO类的位置 配置生成的实体包
-         targetPackage：生成的实体包位置，默认存放在src目录下
-         targetProject：目标工程名
-      -->
+        <!--生成PO类的位置 配置生成的实体包-->
+        <!--targetPackage：生成的实体包位置，默认存放在src目录下-->
+        <!--targetProject：相对路径  路径拼接结果 src/main/java/one/domain -->
         <javaModelGenerator targetPackage="one.domain" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false"/>
             <!-- 从数据库返回的值被清理前后的空格 -->
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <!-- 实体包对应映射文件位置及名称，默认存放在src目录下 -->
+        <!-- 实体包对应映射文件位置及名称，默认存放在src目录下 同上 -->
         <sqlMapGenerator targetPackage="MapperXml" targetProject="src/main/resources">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
-        <!--targetPackage：mapper接口生成的位置，遵循MyBatis规范，让mapper.xml
-                和mapper.java在同一目录下 -->
+        <!--targetPackage：mapper接口生成的位置-->
         <javaClientGenerator targetPackage="one.mapper" type="XMLMAPPER" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
-        <!-- 配置表
-         schema：不用填写
-         tableName: 表名
-         enableCountByExample、enableSelectByExample、enableDeleteByExample、enableUpdateByExample、selectByExampleQueryId：
-         去除自动生成的例子-->
+        <!--配置表-->
+        <!--schema：不用填写-->
+        <!--tableName: 表名 TODO-->
+        <!--enableCountByExample、enableSelectByExample、enableDeleteByExample、enableUpdateByExample、selectByExampleQueryId：-->
+        <!--去除自动生成的注释例子-->
         <table tableName="tb_user" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
     </context>
