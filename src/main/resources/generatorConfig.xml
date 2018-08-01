@@ -42,7 +42,7 @@
         </sqlMapGenerator>
         <!--targetPackage：mapper接口生成的位置，遵循MyBatis规范，让mapper.xml
                 和mapper.java在同一目录下 -->
-        <javaClientGenerator targetPackage="one.mapper" type="XMLMAPPER" targetProject="./src/main/java">
+        <javaClientGenerator targetPackage="one.mapper" type="XMLMAPPER" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
