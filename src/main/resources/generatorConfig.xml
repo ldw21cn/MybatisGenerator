@@ -7,7 +7,7 @@
     <properties resource="jdbc.properties"/>
     <!--数据库驱动文件  需要修改 TODO-->
     <classPathEntry
-            location="/Volumes/Tool/JAVA_Tool/maven/Maven_Repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar"/>
+            location="/Volumes/Tool/JAVA_Tool/maven/Maven_Repository/mysql/mysql-connector-java/5.1.46/mysql-connector-java-5.1.46.jar"/>
 
     <context id="context" targetRuntime="MyBatis3Simple">
         <commentGenerator>
@@ -50,7 +50,16 @@
         <!--tableName: 表名 TODO-->
         <!--enableCountByExample、enableSelectByExample、enableDeleteByExample、enableUpdateByExample、selectByExampleQueryId：-->
         <!--去除自动生成的注释例子-->
-        <table tableName="tb_user" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_content" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_content_category" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_item" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_item_cat" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_item_desc" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_item_param" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_item_param_item" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_order" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_order_item" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_order_shipping" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>
