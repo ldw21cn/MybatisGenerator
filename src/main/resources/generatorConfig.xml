@@ -11,7 +11,7 @@
     <!--是否生成 example   -->
     <!--targetRuntime="MyBatis3" 生成-->
     <!--targetRuntime="MyBatis3Simple"  不生成-->
-    <context id="context" targetRuntime="MyBatis3Simple">
+    <context id="context" targetRuntime="MyBatis3">
         <commentGenerator>
             <!-- 是否去除自动生成的注释，true：是；false:否 -->
             <property name="suppressAllComments" value="true"/>
@@ -52,41 +52,25 @@
         <!--tableName: 表名 TODO-->
         <!--enableCountByExample、enableSelectByExample、enableDeleteByExample、enableUpdateByExample、selectByExampleQueryId：-->
         <!--去除自动生成的注释例子-->
-        <table tableName="tb_address" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_brand" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_content" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_content_category" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_goods" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_goods_desc" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_item" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_item_cat" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_order" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_order_item" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_pay_log" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_seckill_goods" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_seckill_order" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_seller" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_specification" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_specification_option" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_type_template" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
-        <table tableName="tb_user" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="tb_address" />
+        <table tableName="tb_brand" />
+        <table tableName="tb_content" />
+        <table tableName="tb_content_category" />
+        <table tableName="tb_goods" />
+        <table tableName="tb_goods_desc" />
+        <table tableName="tb_item" />
+        <table tableName="tb_item_cat" />
+        <table tableName="tb_order" />
+        <table tableName="tb_order_item" />
+        <table tableName="tb_pay_log" />
+        <table tableName="tb_seckill_goods" />
+        <table tableName="tb_seckill_order" />
+        <table tableName="tb_seller" />
+        <table tableName="tb_specification" />
+        <table tableName="tb_specification_option" />
+        <table tableName="tb_type_template" />
+        <!--增删改查的Example  去掉即可生成-->
+        <!--<table tableName="tb_user" enableCountByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" enableUpdateByExample="false"/>-->
     </context>
 </generatorConfiguration>
